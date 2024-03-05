@@ -75,18 +75,18 @@ services:
       - globalnetwork
 
   
-  # pgAdmin:
-  #   container_name: pgAdmin
-  #   image: dpage/pgadmin4:latest
-  #   environment:
-  #     - PGADMIN_DEFAULT_EMAIL=nikita.shalashkov@gmail.com
-  #     - PGADMIN_DEFAULT_PASSWORD=postgres
-  #   ports:
-  #     - "5050:80"
-  #   networks:
-  #     - globalnetwork
-  #   depends_on:
-  #     - db
+  pgAdmin:
+    container_name: pgAdmin
+    image: dpage/pgadmin4:latest
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=nikita.shalashkov@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=postgres
+    ports:
+      - "5050:80"
+    networks:
+      - globalnetwork
+    depends_on:
+      - db
 
 networks:
   globalnetwork:
